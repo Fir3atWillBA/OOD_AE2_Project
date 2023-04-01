@@ -56,10 +56,13 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.app.current_expression, "")
         self.assertEqual(self.app.total_expression, "")
 
-    def test_square(self):
-        self.app.add_to_expression(4)
-        self.app.square()
-        self.assertEqual(self.app.current_expression, "16")
+    def test_raise_to_power(self):
+        self.app.entry.insert(tk.END, "3")
+        self.app.raise_to_power_button.invoke()
+        self.app.entry.insert(tk.END, "2")
+        self.app.equal_button.invoke()
+        self.assertEqual(self.app.result.get(), "9")
+
 
     def test_sqrt(self):
         self.app.add_to_expression(16)
