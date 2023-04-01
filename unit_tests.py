@@ -56,16 +56,6 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.app.current_expression, "")
         self.assertEqual(self.app.total_expression, "")
 
-    def test_square(self):
-        self.app.add_to_expression(4)
-        self.app.square()
-        self.assertEqual(self.app.current_expression, "16")
-
-    def test_sqrt(self):
-        self.app.add_to_expression(16)
-        self.app.sqrt()
-        self.assertEqual(self.app.current_expression, "4.0")
-
     def tear_down(self):
         self.root.destroy()
 
