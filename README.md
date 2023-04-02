@@ -55,7 +55,7 @@ python unit_tests.py
 
 ## Evaluation:
 
-This calculator project successfully implements a simple graphical user interface using the tkinter library in Python. The calculator performs basic arithmetic operations (addition, subtraction, multiplication, and division), along with special functions like raising to power and square root.The code is *modular* and easy to read. The use of object-oriented programming and design patterns makes the code flexible and extendable.
+This calculator project successfully implements a simple graphical user interface using the tkinter library in Python. The calculator performs basic arithmetic operations (addition, subtraction, multiplication, and division), along with special functions like raising to power and square root. The code is *modular* and easy to read. The use of object-oriented programming and design patterns makes the code flexible and extendable.
 
 The calculator has been tested with unit tests, and it has passed all tests provided. However, there are a number of complex test scenarios that can be added to ensure the reliability and accuracy of the calculations.
 
