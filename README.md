@@ -23,7 +23,7 @@ To run the program, you need to have Python 3.6 and Tkinter installed on your sy
 ### Download the Project Files
 
 1. Clone the repository or download the ZIP file of the project from GitHub.
-2. Extract the files (if downloaded as a ZIP file) to a folder of your choice.
+2. Extract the files to a folder of your choice.
 
 ### Run the Calculator App
 
