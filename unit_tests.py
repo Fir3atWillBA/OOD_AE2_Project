@@ -7,6 +7,9 @@ class TestCalculator(unittest.TestCase):
         self.calculator = Calculator()
         self.calculator.run = MagicMock()  # Mock run method to prevent the app from running during tests
 
+    def test_smoke_test(self):
+        self.assertIsInstance(self.calculator, Calculator, "Failed to create a Calculator instance")
+
     def test_add_to_expression(self):
         self.calculator.add_to_expression("5")
         self.assertEqual(self.calculator.current_expression, "5")
