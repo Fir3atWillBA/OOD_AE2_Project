@@ -4,9 +4,9 @@ from calculator_code import Calculator
 
 class TestCalculator(unittest.TestCase):
     
-    def set_up(self):
+    def setUp(self):
         self.root = Tk()
-        self.app = Calculator()
+        self.app = Calculator(master=self.root)
         self.app.total_label = self.app.label = None # Remove label creation from constructor
         self.app.create_display_labels() # Create labels manually
         self.app.buttons_frame = self.app.create_buttons_frame()
@@ -56,7 +56,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.app.current_expression, "")
         self.assertEqual(self.app.total_expression, "")
 
-    def tear_down(self):
+    def tearDown(self):
         self.root.destroy()
 
 if __name__ == '__main__':
