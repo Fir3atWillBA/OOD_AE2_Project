@@ -8,7 +8,7 @@ The purpose of this project is to develop a basic calculator using object-orient
 
 ### Instructions
 
-Use of the calculator is self-explanatory; use the binary operation button between real numbers and press the equals button to produce the result of the desired calculation, just like any normal calculator.
+Use of the calculator is self-explanatory; use any binary operation button (e.g., "+") between desired real numbers and press the equals button to produce the result of the desired calculation, just like any normal calculator.
 
 ## Design Brief:
 The project follows the *Waterfall* Systems Development Life Cycle, a linear approach to software development that completes important components in successive stages. As will be evident upon examining the code, the object-oriented design is modeled after a Model-View-Control architecture. 
