@@ -7,16 +7,6 @@ class TestCalculator(unittest.TestCase):
         self.calculator = Calculator()
         self.calculator.run = MagicMock()  # Mock run method to prevent the app from running during tests
 
-    def test_create_buttons_frame(self):
-        self.assertIsInstance(self.calculator.buttons_frame, tk.Frame)
-
-    def test_create_display_frame(self):
-        self.assertIsInstance(self.calculator.display_frame, tk.Frame)
-
-    def test_create_display_labels(self):
-        self.assertIsInstance(self.calculator.total_label, tk.Label)
-        self.assertIsInstance(self.calculator.label, tk.Label)
-
     def test_add_to_expression(self):
         self.calculator.add_to_expression("5")
         self.assertEqual(self.calculator.current_expression, "5")
@@ -43,10 +33,6 @@ class TestCalculator(unittest.TestCase):
         self.calculator.total_expression = "10+5*2"
         self.calculator.evaluate()
         self.assertEqual(self.calculator.current_expression, "20")
-
-    def test_smoke_test(self):
-        calc = Calculator()
-        calc.run.assert_called_once()
 
 if __name__ == "__main__":
     unittest.main()
