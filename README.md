@@ -1,8 +1,14 @@
 # OOD_AE2 Project
 
+<img width="487" alt="Screenshot 2023-04-02 at 7 17 46 PM" src="https://user-images.githubusercontent.com/122615154/229371315-99a51e04-d44b-4cd7-8535-c9de921d4d54.png">
+
 ## Introduction:
 
 The purpose of this project is to develop a basic calculator using object-oriented programming principles in Python. The calculator will make use of a Graphical User Interface (GUI) created with tkinter, and be able to perform standard arithmetic tasks such as the standard real number field operations (viz. "+", "-", "*", and "/"), taking a base to a specified exponent, and calculating square roots.
+
+### Instructions
+
+Use of the calculator is self-explanatory; use the binary operation button between real numbers and press the equals button to produce the result of the desired calculation, just like any normal calculator.
 
 ## Design Brief:
 The project follows the *Waterfall* Systems Development Life Cycle, a linear approach to software development that completes important components in successive stages. As will be evident upon examining the code, the object-oriented design is modeled after a Model-View-Control architecture. 
@@ -51,7 +57,11 @@ This calculator project successfully implements a simple graphical user interfac
 The calculator has been tested with unit tests, and it has passed all tests provided. However, there are a number of complex test scenarios that can be added to ensure the reliability and accuracy of the calculations.
 One area for improvement could be the addition of error handling for invalid inputs, such as dividing by zero (which I have accounted for in the calculator_code.py file) or entering invalid characters. Additionally, the interface could be made more visually appealing and user-friendly with the addition of more graphics and design elements. The colors of the calculator were chosen purposefully to be reminiscent of schoolhouse chalkboard colors, with white chalk for the characters used.
 
-Overall, this calculator project is a good example of how to implement a graphical user interface using the tkinter library in Python, and can serve as a starting point for further development and customization. As an object-oriented project, it will lend itself to future additions of complex mathematical operations, such as trigonometric functions.
+In the end, this calculator project is a good example of how to implement a graphical user interface using the tkinter library in Python, and can serve as a starting point for further development and customization. As an object-oriented project, it will lend itself to future additions of complex mathematical operations, such as trigonometric functions.
 
+## User evaluation:
 
-<img width="487" alt="Screenshot 2023-04-02 at 7 17 46 PM" src="https://user-images.githubusercontent.com/122615154/229371315-99a51e04-d44b-4cd7-8535-c9de921d4d54.png">
+"I felt like I was using a calculator that looked like a chalkboard! It was very user-friendly. I just wish that the calculator was able to carry out multiple operations simultaneously, while adhering to the order of operations. Also, I wish it had parentheses and maybe other operations. It also felt like the square root button was superfluous because you can use decimals with the power function, so you can calculate the square root by simply raising a number to the power of 0.5. But in spite of all that, solid job!"
+
+ - Anonymous user.
+
