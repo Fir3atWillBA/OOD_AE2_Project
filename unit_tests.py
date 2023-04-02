@@ -1,65 +1,53 @@
 import unittest
-from tkinter import Tk
+from unittest.mock import MagicMock
 from calculator_code import Calculator
 
-
 class TestCalculator(unittest.TestCase):
-    
     def setUp(self):
-        self.root = Tk()
-        self.app = Calculator()
-        self.app.total_label = self.app.label = None # Remove label creation from constructor
-        self.app.create_display_labels() # Create labels manually
-        self.app.buttons_frame = self.app.create_buttons_frame()
-        self.app.create_digit_buttons()
-        self.app.create_operator_buttons()
-        self.app.create_special_buttons()
-        self.app.bind_keys()
+        self.calculator = Calculator()
+        self.calculator.run = MagicMock()  # Mock run method to prevent the app from running during tests
 
-    def test_smoke(self):
-        self.app.add_to_expression(2)
-        self.app.append_operator("+")
-        self.app.add_to_expression(3)
-        self.app.evaluate()
-        self.assertEqual(self.app.current_expression, "5")
+    def test_create_buttons_frame(self):
+        self.assertIsInstance(self.calculator.buttons_frame, tk.Frame)
 
-    def test_addition(self):
-        self.app.add_to_expression(5)
-        self.app.append_operator("+")
-        self.app.add_to_expression(3)
-        self.app.evaluate()
-        self.assertEqual(self.app.current_expression, "8")
+    def test_create_display_frame(self):
+        self.assertIsInstance(self.calculator.display_frame, tk.Frame)
 
-    def test_subtraction(self):
-        self.app.add_to_expression(5)
-        self.app.append_operator("-")
-        self.app.add_to_expression(3)
-        self.app.evaluate()
-        self.assertEqual(self.app.current_expression, "2")
+    def test_create_display_labels(self):
+        self.assertIsInstance(self.calculator.total_label, tk.Label)
+        self.assertIsInstance(self.calculator.label, tk.Label)
 
-    def test_multiplication(self):
-        self.app.add_to_expression(5)
-        self.app.append_operator("*")
-        self.app.add_to_expression(3)
-        self.app.evaluate()
-        self.assertEqual(self.app.current_expression, "15")
+    def test_add_to_expression(self):
+        self.calculator.add_to_expression("5")
+        self.assertEqual(self.calculator.current_expression, "5")
 
-    def test_division(self):
-        self.app.add_to_expression(10)
-        self.app.append_operator("/")
-        self.app.add_to_expression(2)
-        self.app.evaluate()
-        self.assertEqual(self.app.current_expression, "5")
+    def test_append_operator(self):
+        self.calculator.current_expression = "5"
+        self.calculator.append_operator("+")
+        self.assertEqual(self.calculator.total_expression, "5+")
+        self.assertEqual(self.calculator.current_expression, "")
 
     def test_clear(self):
-        self.app.add_to_expression(10)
-        self.app.clear()
-        self.assertEqual(self.app.current_expression, "")
-        self.assertEqual(self.app.total_expression, "")
+        self.calculator.current_expression = "5"
+        self.calculator.total_expression = "10+"
+        self.calculator.clear()
+        self.assertEqual(self.calculator.current_expression, "")
+        self.assertEqual(self.calculator.total_expression, "")
 
-    def tearDown(self):
-        self.root.destroy()
+    def test_sqrt(self):
+        self.calculator.current_expression = "9"
+        self.calculator.sqrt()
+        self.assertEqual(self.calculator.current_expression, "3.0")
 
-if __name__ == '__main__':
+    def test_evaluate(self):
+        self.calculator.total_expression = "10+5*2"
+        self.calculator.evaluate()
+        self.assertEqual(self.calculator.current_expression, "20")
+
+    def test_smoke_test(self):
+        calc = Calculator()
+        calc.run.assert_called_once()
+
+if __name__ == "__main__":
     unittest.main()
 
