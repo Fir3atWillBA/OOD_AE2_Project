@@ -54,3 +54,4 @@ One area for improvement could be the addition of error handling for invalid inp
 Overall, this calculator project is a good example of how to implement a graphical user interface using the tkinter library in Python, and can serve as a starting point for further development and customization. As an object-oriented project, it will lend itself to future additions of complex mathematical operations, such as trigonometric functions.
 
 
+<img width="487" alt="Screenshot 2023-04-02 at 7 17 46 PM" src="https://user-images.githubusercontent.com/122615154/229371315-99a51e04-d44b-4cd7-8535-c9de921d4d54.png">
