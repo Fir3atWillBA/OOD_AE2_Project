@@ -1,6 +1,6 @@
 import unittest
 from tkinter import Tk
-from calculator import Calculator
+from calculator_code import Calculator
 
 class TestCalculator(unittest.TestCase):
     
