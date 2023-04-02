@@ -1,4 +1,4 @@
-# OOD_AE2 Project
+# OOD_AE2 Project: Simple tkinter Calculator GUI
 
 <img width="487" alt="Screenshot 2023-04-02 at 7 17 46 PM" src="https://user-images.githubusercontent.com/122615154/229371315-99a51e04-d44b-4cd7-8535-c9de921d4d54.png">
 
